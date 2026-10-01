@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment | Bright Smile Dental Clinic</title>
+  <meta name="description" content="Book your dental appointment at Bright Smile Dental Clinic. Find our address, phone number and opening hours.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Bright Smile Dental Clinic home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#0e7c86"/><path d="M14 18c0-4 3-6 6-6 2 0 3 1 4 1s2-1 4-1c3 0 6 2 6 6 0 6-3 8-3 14 0 3-1 5-2.5 5S26 35 26 32h-4c0 3-1 5-2.5 5S17 35 17 32c0-6-3-8-3-14z" fill="#fff"/></svg>
+        Bright Smile
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="btn" href="appointment.html" aria-current="page">Book Appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Book an Appointment</h1>
+        <p>Fill in the form and our team will call you to confirm your visit.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2.5rem;align-items:start;" id="booking-layout">
+
+        <div class="form-card">
+          <h2>Request your visit</h2>
+          <p style="color:var(--muted);">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only"> with an asterisk</span> are required.</p>
+
+          <form id="appointment-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+                <div class="error-msg" id="name-error" role="alert"></div>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required aria-describedby="phone-error">
+                <div class="error-msg" id="phone-error" role="alert"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email (optional)</label>
+              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+              <div class="error-msg" id="email-error" role="alert"></div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="service">Service <span class="req" aria-hidden="true">*</span></label>
+                <select id="service" name="service" required aria-describedby="service-error">
+                  <option value="">Select a service</option>
+                  <option>Checkup &amp; Cleaning</option>
+                  <option>Teeth Whitening</option>
+                  <option>Braces &amp; Aligners</option>
+                  <option>Dental Implants</option>
+                  <option>Pediatric Dentistry</option>
+                  <option>Emergency Care</option>
+                  <option>Other</option>
+                </select>
+                <div class="error-msg" id="service-error" role="alert"></div>
+              </div>
+              <div class="field">
+                <label for="date">Preferred date <span class="req" aria-hidden="true">*</span></label>
+                <input type="date" id="date" name="date" required aria-describedby="date-error">
+                <div class="error-msg" id="date-error" role="alert"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Anything we should know? (optional)</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Request Appointment</button>
+            <div id="form-success" class="form-success" role="status" tabindex="-1"></div>
+          </form>
+        </div>
+
+        <aside aria-label="Clinic contact details">
+          <div class="card" style="margin-bottom:1.5rem;">
+            <h2 style="font-size:1.4rem;">Contact us</h2>
+            <ul class="info-list" style="margin-top:1rem;">
+              <li><span aria-hidden="true">📍</span><div><strong>Address</strong>123 Main Street, Your City</div></li>
+              <li><span aria-hidden="true">📞</span><div><strong>Phone</strong><a href="tel:+10000000000">+1 (000) 000-0000</a></div></li>
+              <li><span aria-hidden="true">✉️</span><div><strong>Email</strong><a href="mailto:hello@brightsmile.example">hello@brightsmile.example</a></div></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2 style="font-size:1.4rem;">Opening hours</h2>
+            <table class="hours">
+              <caption class="sr-only">Clinic opening hours</caption>
+              <tbody>
+                <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+                <tr><td>Saturday</td><td>10:00 AM – 3:00 PM</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </tbody>
+            </table>
+            <p style="margin:1rem 0 0;color:var(--muted);">Dental emergency? Call us directly for same-day help.</p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Bright Smile Dental Clinic</h3>
+          <p>Gentle, modern dental care for the whole family.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>123 Main Street, Your City</li>
+            <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+            <li><a href="mailto:hello@brightsmile.example">hello@brightsmile.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <ul>
+            <li>Mon – Fri: 9:00 AM – 6:00 PM</li>
+            <li>Saturday: 10:00 AM – 3:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; <span data-year>2026</span> Bright Smile Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (max-width: 900px) { #booking-layout { grid-template-columns: 1fr !important; } }
+  </style>
+  <script src="js/main.js"></script>
+</body>
+</html>
